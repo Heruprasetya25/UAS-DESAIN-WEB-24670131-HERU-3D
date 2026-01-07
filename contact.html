@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kontak — ROCKET SUPLLY</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-gradient sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="assets/image/logo.jpeg" alt="logo" class="logo">
+        <span class="brand-title">ROCKET SUPLLY</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Tentang</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Produk</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="py-5">
+    <div class="container">
+      <h1 class="section-title" data-aos="fade-up">Kontak Kami</h1>
+
+      <div class="row gy-4 mt-3">
+        <div class="col-lg-5" data-aos="fade-right">
+          <div class="card p-4 rounded-4 shadow-sm">
+            <h5>Informasi</h5>
+            <p class="small text-muted">Hubungi kami untuk konsultasi ukuran, stok, atau kolaborasi.</p>
+            <ul class="list-unstyled small text-muted">
+              <li>Email: <a href="mailto:info@rocketsuplly.com">info@rocketsuplly.com</a></li>
+              <li>Telepon/WA: <a href="tel:+62895340240002">+62 895-3402-40002</a></li>
+              <li>Alamat: Jl. profesor WZ.Yohanes No20,Kota Surakarta,Jawa Tengah 57128,indonesia</li>
+            </ul>
+            <div class="mt-3">
+              <a href="https://www.instagram.com/rocketsupplys_?igsh=MXdtZGdpa3F2ZnRzaQ==" class="btn btn-outline-primary btn-sm me-2">Instagram</a>
+              <a href="https://wa.me/62895340240002" class="btn btn-success btn-sm">WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7" data-aos="fade-left">
+          <div class="card p-4 rounded-4 shadow-sm">
+            <h5>Kirim Pesan</h5>
+            <form id="contactForm" action="https://formspree.io/f/your-form-id" method="POST" novalidate>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label">Nama</label>
+                  <input type="text" name="name" id="name" class="form-control" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Email</label>
+                  <input type="email" name="_replyto" id="email" class="form-control" required>
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Pesan</label>
+                  <textarea name="message" id="message" rows="5" class="form-control" required></textarea>
+                </div>
+                <div class="col-12 d-flex justify-content-between align-items-center">
+                  <button type="submit" class="btn btn-success">Kirim Pesan</button>
+                  <div id="formAlert" class="small text-muted"></div>
+                </div>
+              </div>
+            </form>
+            <p class="small text-muted mt-3">Catatan: Saat ini form menggunakan Formspree (opsional). Jika belum ingin menggunakan, form akan fallback ke mailto (JS akan menyiapkan mailto).</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="py-4">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="small text-muted">© <span id="year-contact"></span> ROCKET SUPLLY</div>
+      <div><a href="index.html" class="btn btn-outline-primary btn-sm">Beranda</a></div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="assets/js/greeting.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    AOS.init({ duration: 700, once: true });
+    document.getElementById('year-contact').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
